@@ -1,0 +1,108 @@
+html{
+	height: 100%;
+	background: #000000;
+	overflow: hidden;
+}
+
+body{
+	height: 100%;
+	margin: 0;
+}
+
+div.gearMN{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-35%, -47%)
+}
+
+div.gearTL{
+  margin: 0;
+  position: relative;
+  top: -53.3%;
+  left: -72%;
+}
+
+div.gearBR{
+  margin: 0;
+  position: relative;
+  top: -60%;
+  left: 29%;
+}
+
+
+#background{
+	display: block;
+	width: 74.5vh;
+	margin: 0 auto;
+	height: 100%;
+	background: #55442f;
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating-counterclockwise {
+  from {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+.clockBG {
+  -webkit-animation: rotating 63.5s linear infinite;
+  -moz-animation: rotating 63.5s linear infinite;
+  -ms-animation: rotating 63.5s linear infinite;
+  -o-animation: rotating 63.5s linear infinite;
+  animation: rotating 63.5s linear infinite;
+}
+
+.clockTL {
+    -webkit-animation: rotating 48s linear infinite;
+    -moz-animation: rotating 48s linear infinite;
+    -ms-animation: rotating 48s linear infinite;
+    -o-animation: rotating 48s linear infinite;
+    animation: rotating 48s linear infinite;
+  }
+
+.clockBR {
+  -webkit-animation: rotating-counterclockwise 48s linear infinite;
+  -moz-animation: rotating-counterclockwise 48s linear infinite;
+  -ms-animation: rotating-counterclockwise 48s linear infinite;
+  -o-animation: rotating-counterclockwise 48s linear infinite;
+  animation: rotating-counterclockwise 48s linear infinite;
+}
+
+.fg {
+	z-index: 2;
+}
+
+.bg {
+	z-index: 1;
+}

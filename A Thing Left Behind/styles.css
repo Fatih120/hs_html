@@ -1,0 +1,100 @@
+html{
+	height: 100%;
+	background: #000000;
+	overflow: hidden;
+}
+
+body{
+	height: 100%;
+	margin: 0;
+}
+
+div.dead-center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+#background{
+	display: block;
+	width: 74.5vh;
+	margin: 0 auto;
+	height: 100%;
+	background: #482460;
+}
+
+.purple-overlay{
+	height:100%;
+	z-index:3;
+	mix-blend-mode:hard-light;
+	top:49% !important;
+}
+
+.white-overlay{
+	height:100%;
+	z-index:4;
+	mix-blend-mode:difference;
+	top:49% !important;
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating-counterclockwise {
+  from {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 48s linear infinite;
+  -moz-animation: rotating 48s linear infinite;
+  -ms-animation: rotating 48s linear infinite;
+  -o-animation: rotating 48s linear infinite;
+  animation: rotating 48s linear infinite;
+}
+
+.rotating-counterclockwise {
+  -webkit-animation: rotating-counterclockwise 32s linear infinite;
+  -moz-animation: rotating-counterclockwise 32s linear infinite;
+  -ms-animation: rotating-counterclockwise 32s linear infinite;
+  -o-animation: rotating-counterclockwise 32s linear infinite;
+  animation: rotating-counterclockwise 32s linear infinite;
+  animation: rotating-counterclockwise 32s linear infinite;
+}
+
+.fg {
+	z-index: 2;
+}
+
+.bg {
+	z-index: 1;
+}
